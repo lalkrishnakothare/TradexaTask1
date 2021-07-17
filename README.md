@@ -19,6 +19,6 @@ Note:- Both of the apps should use two different databases.
 
 Requirements :
   1. django
-  2. pip install djmoney-money
+  2. pip install django-money
   
   Can be installed via pip

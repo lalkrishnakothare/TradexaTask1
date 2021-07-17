@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}All Posts{% endblock %}
+
+{% block content %}
+    <div class="container-fluid" align="center">
+        <h1>Create New Post</h1>
+        <form method="post">
+            {% if newpost %}
+                <p><strong>{{msg}}</strong></p>
+                <p><b>Post Text = </b> {{newpost.text}}</p>
+                <p><b>Post Creation Time = </b> {{newpost.created_at}}</p>
+            {% else %}
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Create Post" class="btn btn-success">
+            {% endif %}
+        </form>
+    </div>
+{% endblock %}
